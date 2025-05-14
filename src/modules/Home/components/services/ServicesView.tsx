@@ -1,7 +1,7 @@
-import ButtonLinkTheDoorAgency from '@root/src/common/components/customize/ButtonLinkTheDoorAgency';
-import React from 'react';
-import { CardService } from './CardService';
-import { servicios } from '../../data/Service';
+import React from "react";
+import { CardService } from "./CardService";
+import { servicios } from "../../data/Service";
+import ButtonLinkTheDoorAgency from "@/common/components/customize/ButtonLinkTheDoorAgency";
 
 export const ServicesView = () => {
   return (

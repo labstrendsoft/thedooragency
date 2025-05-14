@@ -1,7 +1,7 @@
-import ButtonLinkTheDoorAgency from '@root/src/common/components/customize/ButtonLinkTheDoorAgency';
-import React from 'react';
-import { images } from '../../data/Trabajos';
-import Image from 'next/image';
+import React from "react";
+import { images } from "../../data/Trabajos";
+import Image from "next/image";
+import ButtonLinkTheDoorAgency from "@/common/components/customize/ButtonLinkTheDoorAgency";
 
 export const WorksViewHome = () => {
   return (

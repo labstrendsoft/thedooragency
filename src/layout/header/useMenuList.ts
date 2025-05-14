@@ -1,5 +1,5 @@
-import { NAVIGATION_MENU } from '@root/src/common/data/navigation';
-import { usePathname } from 'next/navigation';
+import { NAVIGATION_MENU } from "@/common/data/navigation";
+import { usePathname } from "next/navigation";
 
 export function useMenuList() {
   const pathname = usePathname();

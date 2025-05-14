@@ -1,4 +1,4 @@
-import { AboutView } from '@root/src/modules/About/AboutView';
+import { AboutView } from "@/modules/About/AboutView";
 
 export default function Nosotros() {
   return <AboutView />;

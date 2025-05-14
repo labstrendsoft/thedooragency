@@ -18,9 +18,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@root/*": ["./*"],
       "@/*": ["./src/*"],
       "@shadcnui/*": ["./src/common/components/shadcnui/*"],
       "@common/*": ["./src/common/*"],

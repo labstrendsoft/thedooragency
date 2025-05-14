@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
+import { socialLinks } from "@/common/data/social";
 // import logoTrend from '@public/logoTheDoor.webp';
-import { socialLinks } from '@root/src/common/data/social';
 
 export default function Footer() {
   return (
@@ -22,7 +22,7 @@ export default function Footer() {
             Privacidad
           </Link>
           <Link href="/contacto" className="hover:text-gray-300">
-            Términos y Condiciones{' '}
+            Términos y Condiciones{" "}
           </Link>
         </div>
 

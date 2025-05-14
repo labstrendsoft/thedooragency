@@ -1,16 +1,16 @@
-'use client';
-import React from 'react';
-import { EmblaOptionsType } from 'embla-carousel';
-import { DotButton, useDotButton } from './DotButton';
-import { PrevButton, NextButton, usePrevNextButtons } from './Arrows';
-import useEmblaCarousel from 'embla-carousel-react';
-import './embla.css';
-import HomePublicStyles from '../../styles/homePublic.module.css';
-import Fade from 'embla-carousel-fade';
+"use client";
+import React from "react";
+import { EmblaOptionsType } from "embla-carousel";
+import { DotButton, useDotButton } from "./DotButton";
+import { PrevButton, NextButton, usePrevNextButtons } from "./Arrows";
+import useEmblaCarousel from "embla-carousel-react";
+import "./embla.css";
+import HomePublicStyles from "../../styles/homePublic.module.css";
+import Fade from "embla-carousel-fade";
 
-import { cn } from '@root/src/lib/utils';
-import { ButtonBanner } from '../ButtonBanner';
-import Autoplay from 'embla-carousel-autoplay';
+import { ButtonBanner } from "../ButtonBanner";
+import Autoplay from "embla-carousel-autoplay";
+import { cn } from "@/lib/utils";
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -35,7 +35,7 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
       <div className="relative h-full w-full" ref={emblaRef}>
         <div className="flex h-full w-full gap-4">
           <div className="embla__slide flex h-full w-full flex-[0_0_100%] items-center justify-center">
-            <div className={cn(HomePublicStyles.fondoBanner1, 'relative z-10')}>
+            <div className={cn(HomePublicStyles.fondoBanner1, "relative z-10")}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
                 <h2 className="text-[40px] leading-none font-black text-white">
                   DONDE TODO EMPIEZA
@@ -45,7 +45,7 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
             </div>
           </div>
           <div className="embla__slide flex h-full w-full flex-[0_0_100%] items-center justify-center">
-            <div className={cn(HomePublicStyles.fondoBanner2, 'relative z-10')}>
+            <div className={cn(HomePublicStyles.fondoBanner2, "relative z-10")}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
                 <h2 className="text-[40px] leading-none font-black text-white">
                   ACABA PORQUE ACABA
@@ -64,8 +64,8 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={cn('embla__dot', {
-                'embla__dot--selected': index === selectedIndex,
+              className={cn("embla__dot", {
+                "embla__dot--selected": index === selectedIndex,
               })}
             />
           ))}
