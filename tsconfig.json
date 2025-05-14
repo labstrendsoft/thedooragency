@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@root/*": ["./*"],
+      "@/*": ["./src/*"],
+      "@shadcnui/*": ["./src/common/components/shadcnui/*"],
+      "@common/*": ["./src/common/*"],
+      "@public/*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
