@@ -3,7 +3,7 @@ import React from 'react';
 import { images } from '../../data/Trabajos';
 import Image from 'next/image';
 
-export const WorksView = () => {
+export const WorksViewHome = () => {
   return (
     <div className="bg-thedooragency-negro py-20">
       <div className="mx-auto max-w-[1200px]">
