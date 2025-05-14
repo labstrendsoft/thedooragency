@@ -11,19 +11,4 @@ export const NAVIGATION_MENU: Nav[] = [
     href: '/trabajos',
     matchStart: true,
   },
-  {
-    name: 'LO QUE HACEMOS',
-    href: '/aliados',
-    matchStart: false,
-  },
-  {
-    name: 'NOTICIAS',
-    href: '/categoria/brasa-familiar',
-    matchStart: true,
-  },
-  {
-    name: 'CONTACTO',
-    href: '/contacto',
-    matchStart: false,
-  },
 ];
