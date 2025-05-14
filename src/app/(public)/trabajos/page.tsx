@@ -1,5 +1,5 @@
 import { WorksViewModulo } from '@root/src/modules/Works/WorksView';
 
-export default function Nosotros() {
+export default function Trabajos() {
   return <WorksViewModulo />;
 }
