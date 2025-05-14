@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,8 +7,8 @@ import logoTrend from '@public/logoTheDoor.webp';
 
 export const Header = () => {
   return (
-    <header className="bg-thedooragency-negro sticky top-0 z-40 w-full drop-shadow-md">
-      <div className="mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between">
+    <header className="bg-thedooragency-negro sticky top-0 z-40 w-full overflow-hidden drop-shadow-md">
+      <div className="tracking-in-expand-forward-top mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between">
         <Link href="/">
           <Image
             src={logoTrend}
