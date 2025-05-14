@@ -3,8 +3,8 @@ import { PortadaWorks } from './components/Portada';
 
 export const WorksViewModulo = () => {
   return (
-    <div>
+    <main>
       <PortadaWorks />
-    </div>
+    </main>
   );
 };
