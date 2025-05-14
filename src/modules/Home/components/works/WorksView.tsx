@@ -25,6 +25,7 @@ export const WorksView = () => {
             <Image
               src={img}
               alt={`Image ${index + 1}`}
+              placeholder="blur"
               className="w-full object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>

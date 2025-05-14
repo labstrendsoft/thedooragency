@@ -13,7 +13,12 @@ interface CardDirectorProps {
 export const CardDirector: React.FC<CardDirectorProps> = ({ title, subtitle, photo, socials }) => {
   return (
     <div className="flex flex-col items-start space-y-4 text-start">
-      <Image src={photo} alt={title} className="mb-5.5 object-cover shadow-lg" />
+      <Image
+        src={photo}
+        alt={title}
+        placeholder="blur"
+        className="mb-5.5 overflow-hidden rounded-[10px] object-cover shadow-lg"
+      />
       <div className="space-y-0.5">
         <span className="block text-lg font-bold text-white">{title}</span>
         <span className="block text-sm text-gray-100">{subtitle}</span>

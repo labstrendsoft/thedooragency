@@ -47,8 +47,8 @@ export const AboutView = () => {
               key={index}
               className="border-thedooragency-negro flex flex-col items-start space-y-4 rounded-xl border px-8 py-6 text-start"
             >
-              <div className="aspect-square max-w-[110px]">
-                <Image src={item.icon} alt={item.title} className="w-full object-cover" />
+              <div className="aspect-square">
+                <Image src={item.icon} alt={item.title} className="w-[110px] object-cover" />
               </div>
               <h3 className="text-lg font-extrabold">{item.title}</h3>
               <p className="text-thedooragency-negro text-sm leading-relaxed">{item.description}</p>
