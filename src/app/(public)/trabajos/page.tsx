@@ -1,3 +1,5 @@
+import { TrabajoView } from "@/modules/Trabajo/TrabajoView";
+
 export default function Trabajos() {
-  return <div>asdasdsa</div>;
+  return <TrabajoView />;
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import WorksStyles from "../styles/works.module.css";
 import ArrowLeft from "@public/arrow1.webp";
-import Image from "next/image";
-import Link from "next/link";
+import WorksStyles from "../styles/trabajo.module.css";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
 
-export const PortadaWorks = () => {
+export const PortadaTrabajo = () => {
   return (
     <section className={cn(WorksStyles.fondoBanner1, "relative z-10")}>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
