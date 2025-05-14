@@ -1,5 +1,5 @@
-import { WorksViewModulo } from "@/modules/Works/WorksView";
+import { HomeView } from "../../../modules/Home/HomeView";
 
 export default function Prueba() {
-  return <WorksViewModulo />;
+  return <HomeView />;
 }
