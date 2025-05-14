@@ -9,6 +9,6 @@ export const NAVIGATION_MENU: Nav[] = [
   {
     name: 'TRABAJOS',
     href: '/trabajos',
-    matchStart: true,
+    matchStart: false,
   },
 ];
