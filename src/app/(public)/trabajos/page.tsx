@@ -1,5 +1,5 @@
-import { WorksView } from '@root/src/modules/Works/WorksView';
+import { WorksViewModulo } from '@root/src/modules/Works/WorksView';
 
 export default function Nosotros() {
-  return <WorksView />;
+  return <WorksViewModulo />;
 }
