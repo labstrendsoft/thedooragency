@@ -11,7 +11,7 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
   if (projects.length === 0) {
     return (
       <div className="pt-10">
-        <div className="border-muted-foreground/20 mx-6 flex flex-col items-center justify-center rounded-lg border border-dashed p-8 text-center lg:mx-0 lg:mt-0">
+        <div className="mx-6 flex flex-col items-center justify-center rounded-lg p-8 text-center lg:mx-0 lg:mt-0">
           <FolderOpen className="mb-3 h-12 w-12 text-white" strokeWidth={1.5} />
           <h3 className="text-muted-foreground text-xl font-medium">
             No hay proyectos en esta categoría
@@ -41,14 +41,14 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
             </div>
             <div className="flex flex-col items-center gap-2.5 px-6 lg:items-start lg:px-0">
               <h2 className="font-black text-white md:text-xl">{project.title}</h2>
-              <div className="flex flex-wrap gap-6 md:gap-8">
+              <div className="flex flex-wrap gap-3 md:gap-8">
                 {project.tags.map((tag) => (
                   <span key={tag} className="flex items-center text-xs text-white/80">
                     <Dot className="w-fit" /> {tag}
                   </span>
                 ))}
               </div>
-              <p className="mb-6 max-w-[500px] text-center text-xs leading-snug text-white lg:text-start lg:text-sm">
+              <p className="mb-6 max-w-[500px] text-center text-xs leading-snug text-balance text-white lg:text-start lg:text-sm">
                 {project.description}
               </p>
               <ButtonLinkTheDoorAgency

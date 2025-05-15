@@ -5,8 +5,8 @@ import { socialLinks } from '@/common/data/social';
 
 export default function Footer() {
   return (
-    <footer className="bg-thedooragency-negro border-t border-gray-700 px-6 pt-6 pb-6 text-[#FFFFFF]">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-between gap-10 md:flex-row">
+    <footer className="bg-thedooragency-negro border-t border-white/30 px-6 pt-6 pb-6 text-[#FFFFFF]">
+      <div className="mx-auto flex w-full max-w-[1200px] flex-col-reverse items-center justify-between gap-10 md:flex-row">
         {/* <Image
           src={logoTrend}
           alt="logo de trendacademy"

@@ -1,4 +1,6 @@
+import { PortadaTrabajo } from '@/modules/Trabajo/components/PortadaTrabajo';
 import { ProjectList } from '@/modules/Trabajo/components/ProjectList';
+import { NavLinksTrabajo } from '@/modules/Trabajo/components/tabs/NavLinks';
 import { PROJECTS } from '@/modules/Trabajo/data/projects';
 import { CategorySlug } from '@/modules/Trabajo/types/project';
 import { notFound } from 'next/navigation';
@@ -24,8 +26,14 @@ export default async function Page({ params }: PageProps) {
     slug === 'todos' ? PROJECTS : PROJECTS.filter((project) => project.categories.includes(slug));
 
   return (
-    <div className="mx-auto max-w-[1000px]">
-      <ProjectList projects={filteredProjects} />
-    </div>
+    <>
+      <PortadaTrabajo />
+      <section id="nuestros-trabajos">
+        <NavLinksTrabajo />
+        <div className="mx-auto max-w-[1000px]">
+          <ProjectList projects={filteredProjects} />
+        </div>
+      </section>
+    </>
   );
 }

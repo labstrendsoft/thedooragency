@@ -7,9 +7,7 @@ import { cn } from '@/lib/utils';
 
 export const Portada = () => {
   return (
-    <section
-      className={cn(AboutStyles.fondoBanner1, 'relative z-10 h-[50vh] md:h-[65vh] lg:h-[75vh]')}
-    >
+    <section className={cn(AboutStyles.fondoBanner1, 'relative z-10 h-[calc(100vh-81px)]')}>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
         <h1 className="tracking-in-contract text-center text-2xl leading-none font-black text-white md:text-[40px]">
           SOBRE NOSOTROS

@@ -6,7 +6,7 @@ import { Nav } from '@/common/types/nav';
 export const ActiveLink = ({ name, href, icon, active }: Nav & { active: boolean }) => {
   return (
     <Link
-      href={href}
+      href={`${href}#nuestros-trabajos`}
       className={cn(
         'text-xs font-medium text-white/70 transition-colors duration-300 ease-out hover:text-white max-md:px-3',
         active && 'text-white',
