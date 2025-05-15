@@ -10,7 +10,7 @@ export const AboutView = () => {
     <main>
       <Portada />
       <section id="sobre-nosotros" className="mx-auto max-w-[1000px] py-16">
-        <div className="text-thedooragency-negro mb-8 space-y-4 text-sm">
+        <div className="text-thedooragency-negro mb-16 space-y-4 px-6 text-sm lg:px-0">
           <p>
             En The Door Agency abrimos puertas a nuevas posibilidades para las marcas que buscan
             crecer, diferenciarse y conectar de forma auténtica en un mundo digital en constante
@@ -38,17 +38,21 @@ export const AboutView = () => {
           </p>
         </div>
 
-        <h3 className="text-thedooragency-negro mx-auto mb-10 max-w-[400px] text-center text-[32px] leading-tight font-black">
+        <h3 className="text-thedooragency-negro mx-auto mb-10 max-w-[400px] px-6 text-center text-2xl leading-tight font-black sm:px-0 lg:text-[32px]">
           NUESTRA PROPUESTA DE VALOR
         </h3>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-3 lg:gap-4 lg:px-0">
           {PropuestaValor.map((item, index) => (
             <div
               key={index}
               className="border-thedooragency-negro flex flex-col items-start space-y-4 rounded-xl border px-8 py-6 text-start"
             >
               <div className="aspect-square">
-                <Image src={item.icon} alt={item.title} className="w-[110px] object-cover" />
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-[80px] object-cover lg:w-[110px]"
+                />
               </div>
               <h3 className="text-lg font-extrabold">{item.title}</h3>
               <p className="text-thedooragency-negro text-sm leading-relaxed">{item.description}</p>
@@ -57,9 +61,9 @@ export const AboutView = () => {
         </div>
       </section>
       <section className="bg-thedooragency-negro py-20">
-        <div className="mx-auto grid max-w-[1000px] grid-cols-2 items-start gap-4">
+        <div className="mx-auto grid max-w-[1000px] grid-cols-1 items-start gap-12 px-6 lg:grid-cols-2 lg:gap-4 lg:px-0">
           <div>
-            <h3 className="mb-4 text-start text-[32px] leading-tight font-black text-white">
+            <h3 className="mb-4 text-start text-2xl leading-tight font-black text-white lg:text-[32px]">
               EQUIPO DIRECTIVO
             </h3>
             <p className="text-sm text-white">
@@ -69,7 +73,7 @@ export const AboutView = () => {
               y el éxito de nuestros clientes.
             </p>
           </div>
-          <div className="flex items-center justify-end gap-8">
+          <div className="flex flex-col gap-8 min-[400px]:flex-row min-[400px]:items-center min-[400px]:gap-6 sm:gap-8 lg:justify-end">
             {directorTeam.map((director) => (
               <CardDirector
                 key={director.name}

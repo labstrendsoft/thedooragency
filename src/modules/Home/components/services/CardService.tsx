@@ -11,7 +11,9 @@ export const CardService = ({ titulo, descripcion }: Props) => {
     <div className="border-thedooragency-negro flex flex-col space-y-2 border-b pb-6">
       <h3 className="text-thedooragency-negro text-base font-bold">{titulo}</h3>
       <div className="flex items-center justify-between">
-        <p className="text-thedooragency-negro max-w-[400px] text-sm">{descripcion}</p>
+        <p className="text-thedooragency-negro max-w-[260px] text-sm sm:max-w-[450px] md:max-w-[300px] lg:max-w-[400px]">
+          {descripcion}
+        </p>
         <div className="flex h-10 w-10 items-center justify-center rounded-full">
           <Image src={Arrow} alt="icono de flecha" className="w-full object-cover" />
         </div>

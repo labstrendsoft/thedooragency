@@ -8,12 +8,12 @@ export const ActiveLink = ({ name, href, icon, active }: Nav & { active: boolean
     <Link
       href={href}
       className={cn(
-        'text-xs font-medium text-white/70 transition-colors duration-300 ease-out hover:text-white',
+        'text-xs font-medium text-white/70 transition-colors duration-300 ease-out hover:text-white max-md:px-3',
         active && 'text-white',
       )}
     >
       {icon}
-      <p className="hidden whitespace-nowrap md:block">{name}</p>
+      <p className="whitespace-nowrap">{name}</p>
     </Link>
   );
 };

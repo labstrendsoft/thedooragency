@@ -1,16 +1,19 @@
-import React from "react";
-import ArrowLeft from "@public/arrow1.webp";
-import WorksStyles from "../styles/trabajo.module.css";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import ArrowLeft from '@public/arrow1.webp';
+import WorksStyles from '../styles/trabajo.module.css';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export const PortadaTrabajo = () => {
   return (
-    <section className={cn(WorksStyles.fondoBanner1, "relative z-10")}>
+    <section
+      className={cn(WorksStyles.fondoBanner1, 'relative z-10 h-[50vh] md:h-[65vh] lg:h-[75vh]')}
+    >
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-        <h1 className="text-[40px] leading-none font-black text-white">NUESTROS TRABAJOS</h1>
-        <p className="max-w-[700px] text-center text-sm text-balance text-white">
+        <h1 className="tracking-in-contract mb-1 text-center text-2xl leading-none font-black text-white md:text-[40px]">
+          NUESTROS TRABAJOS
+        </h1>
+        <p className="max-w-[700px] px-6 text-center text-sm text-white lg:px-0">
           Te invitamos a conocer nuestro portafolio, una muestra de proyectos que reflejan nuestro
           enfoque creativo, estratégico y orientado a resultados. Cada trabajo representa nuestro
           compromiso con la calidad, la innovación y la personalización. Desde sitios web hasta
@@ -18,12 +21,9 @@ export const PortadaTrabajo = () => {
           conectan con las audiencias y cumplen objetivos.
         </p>
       </div>
-      <Link
-        href="#sobre-nosotros"
-        className="animate-scroll-down absolute bottom-6 left-1/2 -translate-x-1/2"
-      >
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
         <Image src={ArrowLeft} alt="arrow left" className="w-3 -rotate-90 object-cover" />
-      </Link>
+      </div>
     </section>
   );
 };

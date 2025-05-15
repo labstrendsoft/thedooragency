@@ -31,13 +31,13 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
     usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla relative h-[75vh] w-full overflow-hidden">
+    <section className="embla relative h-[50vh] w-full overflow-hidden md:h-[65vh] lg:h-[75vh]">
       <div className="relative h-full w-full" ref={emblaRef}>
         <div className="flex h-full w-full gap-4">
           <div className="embla__slide flex h-full w-full flex-[0_0_100%] items-center justify-center">
             <div className={cn(HomePublicStyles.fondoBanner1, 'relative z-10')}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                <h2 className="tracking-in-contract text-[40px] leading-none font-black text-white">
+                <h2 className="tracking-in-contract text-center text-2xl leading-none font-black text-white md:text-[40px]">
                   DONDE TODO EMPIEZA
                 </h2>
                 <ButtonBanner />
@@ -47,7 +47,7 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
           <div className="embla__slide flex h-full w-full flex-[0_0_100%] items-center justify-center">
             <div className={cn(HomePublicStyles.fondoBanner2, 'relative z-10')}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                <h2 className="text-[40px] leading-none font-black text-white">
+                <h2 className="tracking-in-contract text-center text-2xl leading-none font-black text-white md:text-[40px]">
                   ACABA PORQUE ACABA
                 </h2>
                 <ButtonBanner />

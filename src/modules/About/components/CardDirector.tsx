@@ -20,7 +20,7 @@ export const CardDirector: React.FC<CardDirectorProps> = ({ title, subtitle, pho
         className="mb-5.5 overflow-hidden rounded-[10px] object-cover shadow-lg"
       />
       <div className="space-y-0.5">
-        <span className="block text-lg font-bold text-white">{title}</span>
+        <span className="block text-sm font-bold text-white lg:text-lg">{title}</span>
         <span className="block text-sm text-gray-100">{subtitle}</span>
       </div>
       <div className="flex items-center gap-2">

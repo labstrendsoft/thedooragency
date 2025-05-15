@@ -1,12 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
-import { socialLinks } from "@/common/data/social";
+import Link from 'next/link';
+import Image from 'next/image';
+import { socialLinks } from '@/common/data/social';
 // import logoTrend from '@public/logoTheDoor.webp';
 
 export default function Footer() {
   return (
     <footer className="bg-thedooragency-negro border-t border-gray-700 px-6 pt-6 pb-6 text-[#FFFFFF]">
-      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between">
+      <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-between gap-10 md:flex-row">
         {/* <Image
           src={logoTrend}
           alt="logo de trendacademy"
@@ -14,7 +14,7 @@ export default function Footer() {
         /> */}
         <span className="text-xs"> © 2025 Thedooragency</span>
 
-        <div className="flex items-center gap-8 text-sm">
+        <div className="flex flex-col items-center gap-2 text-xs md:flex-row md:gap-4 lg:gap-8 lg:text-sm">
           <Link href="/" className="hover:text-gray-300">
             Política de Cookies
           </Link>
@@ -22,7 +22,7 @@ export default function Footer() {
             Privacidad
           </Link>
           <Link href="/contacto" className="hover:text-gray-300">
-            Términos y Condiciones{" "}
+            Términos y Condiciones{' '}
           </Link>
         </div>
 

@@ -54,11 +54,11 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="absolute top-1/2 left-16 -translate-y-1/2 cursor-pointer"
+      className="absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer sm:left-8 lg:left-16"
       type="button"
       {...restProps}
     >
-      <Image src={ArrowLeft} alt="arrow left" className="w-3 object-cover" />
+      <Image src={ArrowLeft} alt="arrow left" className="w-2 object-cover md:w-3" />
 
       {children}
     </button>
@@ -70,11 +70,11 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="absolute top-1/2 right-16 -translate-y-1/2 cursor-pointer"
+      className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer sm:right-8 lg:right-16"
       type="button"
       {...restProps}
     >
-      <Image src={ArrowRight} alt="arrow right" className="w-3 object-cover" />
+      <Image src={ArrowRight} alt="arrow right" className="w-2 object-cover md:w-3" />
 
       {children}
     </button>
