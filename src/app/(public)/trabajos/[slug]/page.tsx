@@ -17,6 +17,8 @@ const VALID_SLUGS: CategorySlug[] = [
 ];
 
 export default async function Page({ params }: PageProps) {
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // delay de prueba
+
   const { slug } = await params;
 
   if (!VALID_SLUGS.includes(slug)) {

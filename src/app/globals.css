@@ -122,7 +122,7 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 81px; /* Ajusta según la altura de tu navbar fijo */
+    scroll-padding-top: 64px; /* Ajusta según la altura de tu navbar fijo */
   }
   body {
     @apply bg-background text-foreground;
@@ -186,3 +186,41 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* loading */
+.loadingtext p {
+  color: white;
+  position: relative;
+}
+
+.loadingtext p::after {
+  position: absolute;
+  animation: b 3s infinite linear;
+  color: white;
+  content: '';
+  left: 105%;
+}
+
+@keyframes b {
+  0% {
+    content: '';
+  }
+
+  10% {
+    content: '.';
+  }
+
+  40% {
+    content: '..';
+  }
+
+  70% {
+    content: '...';
+  }
+
+  100% {
+    content: '';
+  }
+}
+
+/*Fin loading*/
