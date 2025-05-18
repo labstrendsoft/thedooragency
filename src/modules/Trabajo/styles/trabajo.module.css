@@ -3,6 +3,4 @@
   background-size: cover;
   background-position: top center;
   width: 100%;
-  overscroll-behavior: none; /* Evita rebote en iOS */
-  touch-action: none; /* Si tienes scroll bloqueado */
 }
