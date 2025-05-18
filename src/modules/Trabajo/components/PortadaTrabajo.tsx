@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export const PortadaTrabajo = () => {
   return (
-    <section className={cn(WorksStyles.fondoBanner1, 'relative z-10 min-h-[calc(100dvh-64px)]')}>
+    <section className={cn(WorksStyles.fondoBanner1, 'relative z-10 h-[calc(100dvh-64px)]')}>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
         <h1 className="tracking-in-contract mb-1 text-center text-2xl leading-none font-black text-white md:text-[40px]">
           NUESTROS TRABAJOS

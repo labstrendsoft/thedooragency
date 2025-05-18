@@ -3,10 +3,6 @@
   background-size: cover;
   background-position: top center;
   width: 100%;
-}
-
-@supports (height: 100dvh) {
-  .fondoBanner1 {
-    min-height: calc(100dvh - 64px);
-  }
+  overscroll-behavior: none; /* Evita rebote en iOS */
+  touch-action: none; /* Si tienes scroll bloqueado */
 }
