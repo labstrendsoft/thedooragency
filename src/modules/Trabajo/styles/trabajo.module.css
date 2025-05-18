@@ -7,6 +7,6 @@
 
 @supports (height: 100dvh) {
   .fondoBanner1 {
-    height: calc(100dvh - 64px); /* Preciso en móviles */
+    min-height: calc(100dvh - 64px);
   }
 }

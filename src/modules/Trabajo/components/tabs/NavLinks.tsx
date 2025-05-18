@@ -7,7 +7,7 @@ export const NavLinksTrabajo = () => {
   const menuList = useMenuListTrabajo();
 
   return (
-    <div className="sticky top-[81px] w-full border-b border-white/30 backdrop-blur-xl">
+    <div className="sticky top-[64px] w-full border-b border-white/30 backdrop-blur-xl">
       <div className="mx-auto max-w-[1200px] px-6 pt-10 pb-10 lg:px-0">
         <div className="mx-auto flex w-fit flex-wrap items-center justify-center max-md:gap-y-4 max-md:divide-x max-md:divide-white md:gap-8 md:rounded-full md:border md:border-white md:px-8 md:py-4">
           {menuList.map((link) => (
