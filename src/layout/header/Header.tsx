@@ -9,7 +9,7 @@ import { MobileMenu } from './MenuMovil';
 export const Header = () => {
   return (
     <header className="bg-thedooragency-negro sticky top-0 z-40 w-full overflow-hidden border-b border-white/30">
-      <div className="tracking-in-expand-forward-top mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between px-6 xl:px-0">
+      <div className="tracking-in-expand-forward-top mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between px-6 xl:px-0">
         <Link href="/">
           <Image
             src={logoTrend}

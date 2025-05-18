@@ -31,7 +31,7 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
     usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla relative h-[calc(100vh-81px)] w-full overflow-hidden">
+    <section className="embla relative h-[calc(100dvh-64px)] w-full overflow-hidden">
       <div className="relative h-full w-full" ref={emblaRef}>
         <div className="flex h-full w-full gap-4">
           <div className="embla__slide flex h-full w-full flex-[0_0_100%] items-center justify-center">

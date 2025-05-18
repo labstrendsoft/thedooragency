@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} font-montserrat min-h-screen antialiased`}
+        className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} font-montserrat min-h-[100dvh] antialiased`}
       >
         <Header />
         {children}
