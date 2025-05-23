@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <>
       <PortadaTrabajo />
-      <section id="nuestros-trabajos">
+      <section>
         <NavLinksTrabajo />
         <div className="mx-auto max-w-[1000px]">
           <ProjectList projects={filteredProjects} />
