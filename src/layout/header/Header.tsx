@@ -14,7 +14,7 @@ export const Header = () => {
           <Image
             src={logoTrend}
             alt="logo de trendacademy"
-            className="h-auto w-[80px] object-contain will-change-transform"
+            className="h-auto object-cover will-change-transform"
             priority
           />
         </Link>

@@ -3,7 +3,6 @@ import ArrowLeft from '@public/arrow1.webp';
 import WorksStyles from '../styles/trabajo.module.css';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export const PortadaTrabajo = () => {
   return (
@@ -20,12 +19,12 @@ export const PortadaTrabajo = () => {
           conectan con las audiencias y cumplen objetivos.
         </p>
       </div>
-      <Link
+      <a
         href="#nuestros-trabajos"
         className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce"
       >
         <Image src={ArrowLeft} alt="arrow left" className="w-3 -rotate-90 object-cover" />
-      </Link>
+      </a>
     </section>
   );
 };
