@@ -1,3 +1,10 @@
+import { PortadaTrabajo } from '@/modules/Trabajo/components/PortadaTrabajo';
+
 export default function TrabajosLayout({ children }: { children: React.ReactNode }) {
-  return <div className="bg-thedooragency-negro pb-16">{children}</div>;
+  return (
+    <main className="bg-thedooragency-negro relative pb-16">
+      <PortadaTrabajo />
+      {children}
+    </main>
+  );
 }

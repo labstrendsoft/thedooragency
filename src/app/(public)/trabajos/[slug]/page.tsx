@@ -1,4 +1,3 @@
-import { PortadaTrabajo } from '@/modules/Trabajo/components/PortadaTrabajo';
 import { ProjectList } from '@/modules/Trabajo/components/ProjectList';
 import { NavLinksTrabajo } from '@/modules/Trabajo/components/tabs/NavLinks';
 import { PROJECTS } from '@/modules/Trabajo/data/projects';
@@ -9,7 +8,6 @@ type PageProps = {
   params: Promise<{ slug: CategorySlug }>; // params ahora es una promesa
 };
 const VALID_SLUGS: CategorySlug[] = [
-  'todos',
   'marketing-digital',
   'desarrollo-web',
   'branding',
@@ -24,17 +22,14 @@ export default async function Page({ params }: PageProps) {
   if (!VALID_SLUGS.includes(slug)) {
     notFound(); // 404 si no existe la categoría
   }
-  const filteredProjects =
-    slug === 'todos' ? PROJECTS : PROJECTS.filter((project) => project.categories.includes(slug));
+  const filteredProjects = PROJECTS.filter((project) => project.categories.includes(slug));
 
   return (
     <>
-      <PortadaTrabajo />
-      <section>
-        <NavLinksTrabajo />
-        <div className="mx-auto max-w-[1000px]">
-          <ProjectList projects={filteredProjects} />
-        </div>
+      <NavLinksTrabajo />
+
+      <section id="nuestros-trabajos" className="mx-auto max-w-[1000px]">
+        <ProjectList projects={filteredProjects} />
       </section>
     </>
   );

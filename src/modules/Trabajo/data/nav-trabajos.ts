@@ -3,7 +3,7 @@ import { NavTrabajos } from '../types/nav';
 export const NAVIGATION_MENU_TRABAJOS: NavTrabajos[] = [
   {
     name: 'Todos',
-    href: '/trabajos/todos',
+    href: '/trabajos',
   },
   {
     name: 'Branding',

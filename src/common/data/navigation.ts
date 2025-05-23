@@ -13,7 +13,7 @@ export const NAVIGATION_MENU: Nav[] = [
   },
   {
     name: 'TRABAJOS',
-    href: '/trabajos/todos',
+    href: '/trabajos',
     matchStart: true,
   },
   {
