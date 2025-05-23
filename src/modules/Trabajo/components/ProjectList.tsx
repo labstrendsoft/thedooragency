@@ -41,7 +41,7 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
             </div>
             <div className="flex flex-col items-center gap-2.5 px-6 lg:items-start lg:px-0">
               <h2 className="font-black text-white md:text-xl">{project.title}</h2>
-              <div className="flex flex-wrap gap-3 md:gap-8">
+              <div className="flex flex-wrap gap-3 md:gap-x-4 md:gap-y-1">
                 {project.tags.map((tag) => (
                   <span key={tag} className="flex items-center text-xs text-white/80">
                     <Dot className="w-fit" /> {tag}
