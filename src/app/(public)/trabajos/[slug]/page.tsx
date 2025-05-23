@@ -25,12 +25,12 @@ export default async function Page({ params }: PageProps) {
   const filteredProjects = PROJECTS.filter((project) => project.categories.includes(slug));
 
   return (
-    <>
+    <div id="nuestros-trabajos">
       <NavLinksTrabajo />
 
-      <section id="nuestros-trabajos" className="mx-auto max-w-[1000px]">
+      <div className="mx-auto max-w-[1000px]">
         <ProjectList projects={filteredProjects} />
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
