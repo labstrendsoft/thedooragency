@@ -4,7 +4,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, Home, Briefcase, Users, Phone, Mail } from 'lucide-react';
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@shadcnui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@shadcnui/sheet';
 import { Button } from '@shadcnui/button';
 import { Separator } from '@shadcnui/separator';
 import logoTrendBlack from '@public/logoBlack.webp';
@@ -37,6 +44,7 @@ export function MobileMenu() {
                   className="h-auto w-[80px] object-contain will-change-transform"
                 />
               </SheetTitle>
+              <SheetDescription className="hidden"></SheetDescription>
             </div>
           </SheetHeader>
 

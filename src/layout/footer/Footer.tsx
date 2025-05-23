@@ -14,7 +14,7 @@ export default function Footer() {
         /> */}
         <span className="text-xs"> © 2025 Thedooragency</span>
 
-        <div className="flex flex-col items-center gap-2 text-xs md:flex-row md:gap-4 lg:gap-8 lg:text-sm">
+        <div className="flex flex-col items-center gap-2 text-xs md:flex-row md:gap-4 lg:gap-8">
           <Link href="/" className="hover:text-gray-300">
             Política de Cookies
           </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <span className="text-xs"> Contacta con Nosotros</span>
+          {/* <span className="text-xs"> Contacta con Nosotros</span> */}
         </div>
       </div>
     </footer>
