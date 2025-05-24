@@ -20,11 +20,13 @@ export const usePrevNextButtons = (
   const onPrevButtonClick = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollPrev();
+    emblaApi.plugins()?.autoplay?.reset();
   }, [emblaApi]);
 
   const onNextButtonClick = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollNext();
+    emblaApi.plugins()?.autoplay?.reset();
   }, [emblaApi]);
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
@@ -37,6 +39,10 @@ export const usePrevNextButtons = (
 
     onSelect(emblaApi);
     emblaApi.on('reInit', onSelect).on('select', onSelect);
+
+    return () => {
+      emblaApi.off('reInit', onSelect).off('select', onSelect);
+    };
   }, [emblaApi, onSelect]);
 
   return {
@@ -54,7 +60,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer sm:left-8 lg:left-16"
+      className="absolute top-1/2 left-4 hidden -translate-y-1/2 cursor-pointer sm:left-8 md:block lg:left-16"
       type="button"
       {...restProps}
     >
@@ -70,7 +76,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer sm:right-8 lg:right-16"
+      className="absolute top-1/2 right-4 hidden -translate-y-1/2 cursor-pointer sm:right-8 md:block lg:right-16"
       type="button"
       {...restProps}
     >
