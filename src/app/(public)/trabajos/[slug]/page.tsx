@@ -14,7 +14,7 @@ const VALID_SLUGS: CategorySlug[] = [
 ];
 
 export default async function Page({ params }: PageProps) {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const { slug } = await params;
 
