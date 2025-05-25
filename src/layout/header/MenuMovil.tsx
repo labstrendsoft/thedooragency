@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Home, Briefcase, Users, Phone, Mail } from 'lucide-react';
+import { Menu, Home, Briefcase, Users, Phone, FolderKanban } from 'lucide-react';
 
 import {
   Sheet,
@@ -13,10 +13,8 @@ import {
   SheetTrigger,
 } from '@shadcnui/sheet';
 import { Button } from '@shadcnui/button';
-import { Separator } from '@shadcnui/separator';
 import logoTrendBlack from '@public/logoBlack.webp';
 import Image from 'next/image';
-import { socialLinks } from '@/common/data/social';
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -60,16 +58,7 @@ export function MobileMenu() {
                   <span className="text-sm font-medium">Inicio</span>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/trabajos/todos"
-                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
-                  onClick={() => setOpen(false)}
-                >
-                  <Briefcase className="h-5 w-5" />
-                  <span className="text-sm font-medium">Trabajos</span>
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/nosotros"
@@ -78,6 +67,26 @@ export function MobileMenu() {
                 >
                   <Users className="h-5 w-5" />
                   <span className="text-sm font-medium">Sobre Nosotros</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/servicios"
+                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  <FolderKanban className="h-5 w-5" />
+                  <span className="text-sm font-medium">Lo que Hacemos</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/trabajos"
+                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  <Briefcase className="h-5 w-5" />
+                  <span className="text-sm font-medium">Trabajos</span>
                 </Link>
               </li>
               <li>
@@ -91,46 +100,6 @@ export function MobileMenu() {
                 </Link>
               </li>
             </ul>
-
-            <Separator className="my-6" />
-
-            <div className="space-y-4">
-              <h3 className="text-muted-foreground text-sm font-semibold">Contáctanos</h3>
-              <div className="space-y-2">
-                <a
-                  href="tel:+123456789"
-                  className="flex items-center gap-3 p-2 text-sm transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>+1 (234) 567-890</span>
-                </a>
-                <a
-                  href="mailto:info@agencia.com"
-                  className="flex items-center gap-3 p-2 text-sm transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>info@agencia.com</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-4 flex items-center gap-3">
-              {socialLinks.map((social, index) => (
-                <Link
-                  key={index}
-                  href={social.url}
-                  className="bg-thedooragency-negro flex items-center rounded-full p-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={social.icon}
-                    alt={social.name}
-                    className="h-[16px] w-[16px] object-contain transition-opacity hover:opacity-80"
-                  />
-                </Link>
-              ))}
-            </div>
           </nav>
 
           <div className="border-t p-6">
