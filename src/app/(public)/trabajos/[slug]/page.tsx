@@ -1,5 +1,4 @@
 import { ProjectList } from '@/modules/Trabajo/components/ProjectList';
-import { NavLinksTrabajo } from '@/modules/Trabajo/components/tabs/NavLinks';
 import { PROJECTS } from '@/modules/Trabajo/data/projects';
 import { CategorySlug } from '@/modules/Trabajo/types/project';
 import { notFound } from 'next/navigation';
@@ -15,7 +14,7 @@ const VALID_SLUGS: CategorySlug[] = [
 ];
 
 export default async function Page({ params }: PageProps) {
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const { slug } = await params;
 
@@ -26,8 +25,6 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <div id="nuestros-trabajos">
-      <NavLinksTrabajo />
-
       <div className="mx-auto max-w-[1000px]">
         <ProjectList projects={filteredProjects} />
       </div>

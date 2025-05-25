@@ -94,7 +94,6 @@
   justify-self: flex-end;
   align-self: center;
   width: 13rem;
-  max-width: 90%;
   overflow: hidden;
 }
 .embla__progress__bar {

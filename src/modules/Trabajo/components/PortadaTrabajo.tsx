@@ -1,14 +1,22 @@
+'use client';
 import React from 'react';
 import ArrowLeft from '@public/arrow1.webp';
 import WorksStyles from '../styles/trabajo.module.css';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export const PortadaTrabajo = () => {
   return (
-    <section className={cn(WorksStyles.fondoBanner1, 'relative z-10 h-[calc(100dvh-64px)]')}>
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-        <h1 className="tracking-in-contract mb-1 text-center text-2xl leading-none font-black text-white md:text-[40px]">
+    <section className={cn(WorksStyles.fondoBanner1, 'relative z-10 h-[calc(100dvh-76px)]')}>
+      <motion.div
+        className="absolute inset-0 flex flex-col items-center justify-center gap-2"
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
+        <h1 className="mb-1 text-center text-2xl leading-none font-black text-white md:text-[40px]">
           NUESTROS TRABAJOS
         </h1>
         <p className="max-w-[700px] px-6 text-center text-sm text-white lg:px-0">
@@ -18,10 +26,10 @@ export const PortadaTrabajo = () => {
           campañas de marketing digital, aquí verás cómo convertimos ideas en soluciones reales que
           conectan con las audiencias y cumplen objetivos.
         </p>
-      </div>
+      </motion.div>
       <a
         href="#nuestros-trabajos"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hover:opacity-70"
       >
         <Image src={ArrowLeft} alt="arrow left" className="w-3 -rotate-90 object-cover" />
       </a>

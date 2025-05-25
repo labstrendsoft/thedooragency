@@ -12,6 +12,7 @@ import { ButtonBanner } from '../ButtonBanner';
 import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
 import { useAutoplayProgress } from './useAutoplayProgress';
+import { motion } from 'framer-motion';
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -34,34 +35,46 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
     usePrevNextButtons(emblaApi);
 
   return (
-    <section className="relative h-[calc(100dvh-64px)] w-full overflow-hidden">
+    <section className="relative h-[calc(100dvh-76px)] w-full overflow-hidden">
       <div className="bg-thedooragency-negro relative h-full w-full" ref={emblaRef}>
         <div className="flex h-full w-full">
           <div className="flex h-full shrink-0 basis-full items-center justify-center">
             <div className={cn(HomePublicStyles.fondoBanner1, 'relative z-10 h-full w-full')}>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                <h2 className="tracking-in-contract text-center text-2xl leading-none font-black text-white md:text-[40px]">
+              <motion.div
+                className="absolute inset-0 flex flex-col items-center justify-center gap-6"
+                initial={{ opacity: 0, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+              >
+                <h2 className="text-center text-2xl leading-none font-black text-white md:text-[40px]">
                   DONDE TODO EMPIEZA
                 </h2>
                 <ButtonBanner />
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="flex h-full shrink-0 basis-full items-center justify-center">
             <div className={cn(HomePublicStyles.fondoBanner2, 'relative z-10 h-full w-full')}>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                <h2 className="tracking-in-contract text-center text-2xl leading-none font-black text-white md:text-[40px]">
+              <motion.div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
+                <h2 className="text-center text-2xl leading-none font-black text-white md:text-[40px]">
                   ACABA PORQUE ACABA
                 </h2>
                 <ButtonBanner />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
       <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+      <motion.div
+        className="absolute bottom-6 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
         <div
           className={cn('embla__progress', {
             'embla__progress--hidden': !showAutoplayProgress,
@@ -69,7 +82,7 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
         >
           <div className="embla__progress__bar" ref={progressNode} />
         </div>
-      </div>
+      </motion.div>
 
       {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
         <div className="flex items-center gap-2">

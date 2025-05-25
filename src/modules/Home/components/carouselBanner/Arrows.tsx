@@ -60,7 +60,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="absolute top-1/2 left-4 hidden -translate-y-1/2 cursor-pointer sm:left-8 md:block lg:left-16"
+      className="absolute top-1/2 left-4 hidden -translate-y-1/2 cursor-pointer hover:opacity-70 sm:left-8 md:block lg:left-16"
       type="button"
       {...restProps}
     >
@@ -76,7 +76,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="absolute top-1/2 right-4 hidden -translate-y-1/2 cursor-pointer sm:right-8 md:block lg:right-16"
+      className="absolute top-1/2 right-4 hidden -translate-y-1/2 cursor-pointer hover:opacity-70 sm:right-8 md:block lg:right-16"
       type="button"
       {...restProps}
     >
