@@ -31,7 +31,7 @@ export const ServiceComponent: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent>
-              <div className="flex max-w-[1000px] flex-col items-center gap-10 px-6 pt-8 pb-6 lg:mx-auto lg:flex-row xl:px-0">
+              <div className="flex max-w-[1000px] flex-col items-center gap-10 px-6 pb-6 min-[420px]:pt-8 lg:mx-auto lg:flex-row xl:px-0">
                 <Image
                   src={service.contentImage}
                   alt={`${service.title} detalle`}
@@ -43,7 +43,9 @@ export const ServiceComponent: React.FC = () => {
                       key={index}
                       className="flex flex-col items-start gap-4 lg:flex-row lg:gap-6"
                     >
-                      <span className="w-full font-extrabold lg:max-w-[120px]">{step.title}</span>
+                      <span className="w-full text-sm font-extrabold lg:max-w-[120px]">
+                        {step.title}
+                      </span>
                       <p className="text-balance">{step.text}</p>
                     </div>
                   ))}
