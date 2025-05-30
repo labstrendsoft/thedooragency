@@ -52,7 +52,7 @@ export const ServiceComponent: React.FC = () => {
                 </div>
               </div>
             </AccordionContent>
-          </AccordionItem>{' '}
+          </AccordionItem>
         </MotionWrapper>
       ))}
     </Accordion>

@@ -11,7 +11,7 @@ export const socialLinks = [
   },
   {
     name: 'Whatsapp',
-    url: 'https://instagram.com',
+    url: 'https://wa.me/519774353481?text=Hola%2C%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20su%20agencia.',
     icon: wspIcon,
   },
   {
