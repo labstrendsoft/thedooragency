@@ -8,11 +8,10 @@ import './embla.css';
 import HomePublicStyles from '../../styles/homePublic.module.css';
 // import Fade from 'embla-carousel-fade';
 
-import { ButtonBanner } from '../ButtonBanner';
 import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
 import { useAutoplayProgress } from './useAutoplayProgress';
-import { motion } from 'framer-motion';
+import ButtonLinkTheDoorAgency from '@/common/components/customize/ButtonLinkTheDoorAgency';
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -40,41 +39,41 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
         <div className="flex h-full w-full">
           <div className="flex h-full shrink-0 basis-full items-center justify-center">
             <div className={cn(HomePublicStyles.fondoBanner1, 'relative z-10 h-full w-full')}>
-              <motion.div
-                className="absolute inset-0 flex flex-col items-center justify-center gap-6"
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 0 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-              >
-                <h2 className="text-center text-2xl leading-none font-black text-white md:text-[40px]">
+              <div className="fade-in-unique absolute inset-0 flex flex-col items-center justify-center gap-6">
+                <h2 className="text-center text-2xl leading-tight font-black text-white md:text-[40px]">
                   DONDE TODO EMPIEZA
                 </h2>
-                <ButtonBanner />
-              </motion.div>
+                <ButtonLinkTheDoorAgency
+                  href="/servicios"
+                  variant="outline"
+                  className="w-full max-w-fit px-6 py-4 !font-normal"
+                >
+                  Explora nuestros servicios
+                </ButtonLinkTheDoorAgency>
+              </div>
             </div>
           </div>
           <div className="flex h-full shrink-0 basis-full items-center justify-center">
             <div className={cn(HomePublicStyles.fondoBanner2, 'relative z-10 h-full w-full')}>
-              <motion.div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                <h2 className="text-center text-2xl leading-none font-black text-white md:text-[40px]">
-                  ACABA PORQUE ACABA
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
+                <h2 className="text-center text-2xl leading-tight font-black text-white md:text-[40px]">
+                  IDEAMOS. EJECUTAMOS. IMPACTAMOS.
                 </h2>
-                <ButtonBanner />
-              </motion.div>
+                <ButtonLinkTheDoorAgency
+                  href="/trabajos"
+                  variant="outline"
+                  className="w-full max-w-fit px-6 py-4 !font-normal"
+                >
+                  Conoce nuestro trabajo
+                </ButtonLinkTheDoorAgency>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
       <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-      <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      >
+      <div className="fade-in-unique absolute bottom-6 left-1/2 -translate-x-1/2">
         <div
           className={cn('embla__progress', {
             'embla__progress--hidden': !showAutoplayProgress,
@@ -82,7 +81,7 @@ const BannerCarouselHome: React.FC<PropType> = (props) => {
         >
           <div className="embla__progress__bar" ref={progressNode} />
         </div>
-      </motion.div>
+      </div>
 
       {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
         <div className="flex items-center gap-2">

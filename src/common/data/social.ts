@@ -6,7 +6,7 @@ import ytIcon from '@public/redes/yt.webp';
 export const socialLinks = [
   {
     name: 'Facebook',
-    url: 'https://www.facebook.com/agenciadepublicidadparabellezatrend',
+    url: 'https://www.facebook.com/thedooragency',
     icon: fbIcon,
   },
   {
@@ -16,8 +16,8 @@ export const socialLinks = [
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/trend_belleza',
+    url: 'https://www.instagram.com/thedoor.agency/',
     icon: igIcon,
   },
-  { name: 'Youtube', url: 'https://twitter.com', icon: ytIcon },
+  { name: 'Youtube', url: 'https://www.youtube.com/@TheDoorAgency', icon: ytIcon },
 ];

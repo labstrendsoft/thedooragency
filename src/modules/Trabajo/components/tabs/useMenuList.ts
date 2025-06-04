@@ -1,5 +1,5 @@
-import { usePathname } from "next/navigation";
-import { NAVIGATION_MENU_TRABAJOS } from "../../data/nav-trabajos";
+import { usePathname } from 'next/navigation';
+import { NAVIGATION_MENU_TRABAJOS } from '../../data/nav-trabajos';
 
 export function useMenuListTrabajo() {
   const pathname = usePathname();

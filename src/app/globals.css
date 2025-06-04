@@ -175,3 +175,16 @@
 }
 
 /*Fin loading*/
+
+@keyframes fadeInonly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-unique {
+  animation: fadeInonly 1.6s ease-out forwards;
+}

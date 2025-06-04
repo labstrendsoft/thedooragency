@@ -1,22 +1,11 @@
-'use client';
 import React from 'react';
 import { Portada } from './components/Portada';
 import { PropuestaValor } from './data/propuesta-valor';
 import Image from 'next/image';
 import { CardDirector } from './components/CardDirector';
 import { directorTeam } from './data/socialDirectores';
-import { motion } from 'framer-motion';
 
 export const AboutView = () => {
-  const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] },
-    },
-  };
-
   return (
     <main>
       <Portada />
@@ -28,36 +17,18 @@ export const AboutView = () => {
             'Creemos que cada marca tiene una historia poderosa que contar. Por eso, trabajamos desde una mirada integral que abarca desde la construcción de marca hasta la generación de resultados concretos en ventas, engagement y posicionamiento.',
             'Nuestros servicios cubren toda la experiencia del cliente: estrategia digital, gestión de redes sociales, campañas publicitarias (Meta y Google), branding, diseño web, producción audiovisual y más. Cada proyecto lo abordamos con enfoque, dedicación y una visión clara: que tu marca deje huella. Nos impulsa una cultura de trabajo basada en la colaboración, el respeto a las ideas, la mejora continua y la confianza. Valoramos la diversidad de perspectivas y la conexión genuina con nuestros clientes. Más que un proveedor, queremos ser un socio estratégico que evoluciona contigo.',
           ].map((text, index) => (
-            <motion.p
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              {text}
-            </motion.p>
+            <p key={index}>{text}</p>
           ))}
         </div>
 
-        <motion.h3
-          className="text-thedooragency-negro mx-auto mb-10 max-w-[400px] px-6 text-center text-2xl leading-tight font-black sm:px-0 lg:text-[32px]"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        >
+        <h3 className="text-thedooragency-negro mx-auto mb-10 max-w-[400px] px-6 text-center text-2xl leading-tight font-black sm:px-0 lg:text-[32px]">
           NUESTRA PROPUESTA DE VALOR
-        </motion.h3>
+        </h3>
         <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-3 lg:gap-4 lg:px-0">
           {PropuestaValor.map((item, index) => (
-            <motion.div
+            <div
               key={index}
               className="border-thedooragency-negro flex flex-col items-start space-y-4 rounded-xl border px-8 py-6 text-start"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <div className="aspect-square">
                 <Image
@@ -68,18 +39,13 @@ export const AboutView = () => {
               </div>
               <h3 className="text-lg font-extrabold">{item.title}</h3>
               <p className="text-thedooragency-negro text-sm leading-relaxed">{item.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
-      <motion.section
-        className="bg-thedooragency-negro py-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+      <section className="bg-thedooragency-negro py-20">
         <div className="mx-auto grid max-w-[1000px] grid-cols-1 items-start gap-12 px-6 lg:grid-cols-2 lg:gap-4 lg:px-0">
-          <motion.div variants={variants}>
+          <div>
             <h3 className="mb-4 text-start text-2xl leading-tight font-black text-white lg:text-[32px]">
               EQUIPO DIRECTIVO
             </h3>
@@ -89,25 +55,21 @@ export const AboutView = () => {
               tecnología y gestión empresarial para guiar a la agencia hacia la innovación constante
               y el éxito de nuestros clientes.
             </p>
-          </motion.div>
+          </div>
           <div className="flex flex-col gap-8 min-[400px]:flex-row min-[400px]:items-center min-[400px]:gap-6 sm:gap-8 lg:justify-end">
-            {directorTeam.map((director, index) => (
-              <motion.div
-                key={director.name}
-                variants={variants}
-                transition={{ delay: index * 0.15 }}
-              >
+            {directorTeam.map((director) => (
+              <div key={director.name}>
                 <CardDirector
                   title={director.name}
                   subtitle={director.role}
                   photo={director.photo}
                   socials={director.socials}
                 />
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
     </main>
   );
 };

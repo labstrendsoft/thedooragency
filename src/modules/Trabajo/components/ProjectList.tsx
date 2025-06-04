@@ -55,7 +55,6 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
                 href={project.url}
                 variant="outline"
                 className="w-full max-w-fit"
-                external
               >
                 Ver trabajo
               </ButtonLinkTheDoorAgency>
