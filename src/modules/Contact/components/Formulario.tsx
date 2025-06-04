@@ -16,6 +16,7 @@ import {
 } from '@/common/components/shadcnui/form';
 import { sendEmail } from '../action/sendEmail';
 import { LoaderCircle } from 'lucide-react';
+import { RecaptchaWrapper } from './RecaptchaWrapper';
 
 const schema = z.object({
   nombre: z.string().min(1, 'Nombre es obligatorio'),
@@ -24,6 +25,7 @@ const schema = z.object({
   correo: z.string().email('Correo inválido'),
   titulo: z.string().min(1, 'Título es obligatorio'),
   mensaje: z.string().min(1, 'Mensaje es obligatorio'),
+  recaptchaToken: z.string().min(1, 'reCAPTCHA es obligatorio'),
 });
 
 type ContactFormData = z.infer<typeof schema>;
@@ -41,6 +43,7 @@ export const ContactForm = () => {
       correo: '',
       titulo: '',
       mensaje: '',
+      recaptchaToken: '',
     },
   });
 
@@ -51,6 +54,7 @@ export const ContactForm = () => {
         Object.entries(data).forEach(([key, value]) => formData.append(key, value));
 
         const res = await sendEmail(formData);
+        console.log('sendEmail response:', res);
 
         if (!res.success) {
           setResult({ success: false, error: String(res.error ?? 'Error desconocido') });
@@ -67,6 +71,7 @@ export const ContactForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <RecaptchaWrapper action="contact_form" control={form.control} setValue={form.setValue} />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <FormField
             control={form.control}
