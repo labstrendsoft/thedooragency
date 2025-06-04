@@ -188,3 +188,7 @@
 .fade-in-unique {
   animation: fadeInonly 1.6s ease-out forwards;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

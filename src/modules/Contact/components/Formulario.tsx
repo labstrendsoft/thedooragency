@@ -203,6 +203,28 @@ export const ContactForm = () => {
               : 'Error al enviar el correo, inténtalo de nuevo.'}
           </p>
         )}
+
+        <p className="text-muted-foreground text-xs">
+          Este sitio está protegido por reCAPTCHA y se aplican la{' '}
+          <a
+            href="https://policies.google.com/privacy"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Política de Privacidad
+          </a>{' '}
+          y los{' '}
+          <a
+            href="https://policies.google.com/terms"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Términos de Servicio
+          </a>{' '}
+          de Google.
+        </p>
       </form>
     </Form>
   );
