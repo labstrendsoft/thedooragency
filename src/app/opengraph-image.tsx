@@ -25,6 +25,7 @@ export default async function Image() {
         style={{
           fontSize: 128,
           background: 'black',
+          color: 'white',
           width: '100%',
           height: '100%',
           display: 'flex',
