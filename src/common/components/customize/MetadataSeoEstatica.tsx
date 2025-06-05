@@ -60,7 +60,6 @@ export const MetadaSeoEstatica = ({
         : `${title} - ¡Agencia digital de branding, web y marketing!`,
       description,
       url: baseUrl,
-      type,
       images: [
         {
           url: ogImage,
@@ -69,6 +68,8 @@ export const MetadaSeoEstatica = ({
           alt: 'Imagen de The Door Agency',
         },
       ],
+      locale: 'es_PE',
+      type,
     },
     twitter: {
       card: 'summary_large_image',
