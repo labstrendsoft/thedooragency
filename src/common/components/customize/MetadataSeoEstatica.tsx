@@ -59,8 +59,16 @@ export const MetadaSeoEstatica = ({
         ? 'The Door Agency'
         : `${title} - ¡Agencia digital de branding, web y marketing!`,
       description,
+      url: baseUrl,
       type,
-      images: ogImage,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: 'Imagen de The Door Agency',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
