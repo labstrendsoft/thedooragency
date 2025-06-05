@@ -36,7 +36,7 @@ export const MetadaSeoEstatica = ({
   const isHome = title.trim().toLowerCase() === 'inicio' || title.trim() === '';
 
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
     title: isHome
       ? 'The Door Agency'
       : {
@@ -59,16 +59,8 @@ export const MetadaSeoEstatica = ({
         ? 'The Door Agency'
         : `${title} - ¡Agencia digital de branding, web y marketing!`,
       description,
-      url: baseUrl,
       type,
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: 'Imagen de The Door Agency',
-        },
-      ],
+      images: ogImage,
     },
     twitter: {
       card: 'summary_large_image',
