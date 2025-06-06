@@ -7,7 +7,7 @@ export const metadata = MetadaSeoEstatica({
 });
 
 export default async function Contacto() {
-  // await new Promise((resolve) => setTimeout(resolve, 6000));
+  // await new Promise((resolve) => setTimeout(resolve, 10000));
 
   return <ContactView />;
 }

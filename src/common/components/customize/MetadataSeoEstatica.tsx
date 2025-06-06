@@ -53,7 +53,7 @@ export const MetadaSeoEstatica = ({
       'software a medida',
       'The Door Agency',
     ],
-    icons: '/favicon.png',
+    icons: '/favicon.ico',
     openGraph: {
       title: isHome
         ? 'The Door Agency'
