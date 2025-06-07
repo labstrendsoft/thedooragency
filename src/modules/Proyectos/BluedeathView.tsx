@@ -10,12 +10,12 @@ export const BluedeathView = () => {
     <div className="bg-thedooragency-negro">
       <PortadaBlue />
       <section id="video-blue" className="mx-auto max-w-[800px] px-6 py-10 lg:px-0">
-        <YoutubeLite url="https://www.youtube.com/watch?v=jvRicFNkIT8" />
+        <YoutubeLite url="https://www.youtube.com/watch?v=7bd0Iql9fNA" />
       </section>
       <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 gap-2 px-6 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:px-0">
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
+        <YoutubeLite url="https://www.youtube.com/shorts/tozyZ9WrJh8" />
+        <YoutubeLite url="https://www.youtube.com/shorts/W1iXs4irrEY" />
+        <YoutubeLite url="https://www.youtube.com/shorts/dMZTRi6yo5U" />
       </div>
       <div className="grid w-full grid-cols-[1fr_1.5fr_1fr] overflow-hidden xl:h-[calc(100dvh-76px-69px)]">
         <Image src={dos} alt="uno" className="aspect-square h-full w-full object-cover" />

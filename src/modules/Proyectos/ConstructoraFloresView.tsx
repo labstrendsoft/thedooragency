@@ -10,7 +10,7 @@ export const ConstructoraFloresView = () => {
     <div className="bg-thedooragency-negro">
       <PortadaConstructoraFlores />
       <section id="video-blue" className="mx-auto max-w-[800px] px-6 py-10 lg:px-0">
-        <YoutubeLite url="https://www.youtube.com/watch?v=jvRicFNkIT8" />
+        <YoutubeLite url="https://www.youtube.com/watch?v=h6ROrxkwwjs" />
       </section>
       <div className="grid w-full grid-cols-3 overflow-hidden">
         <Image src={uno} alt="uno" className="aspect-square h-full w-full object-cover" />

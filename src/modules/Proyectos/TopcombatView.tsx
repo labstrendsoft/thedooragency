@@ -10,7 +10,7 @@ export const TopcombatView = () => {
     <div className="bg-thedooragency-negro">
       <PortadaCombat />
       <section id="video-blue" className="mx-auto max-w-[800px] px-6 py-10 lg:px-0">
-        <YoutubeLite url="https://www.youtube.com/watch?v=jvRicFNkIT8" />
+        <YoutubeLite url="https://www.youtube.com/watch?v=rzs__932qCE" />
       </section>
 
       <div className="grid w-full grid-cols-[1fr_1.5fr_1fr] overflow-hidden xl:h-[calc(100dvh-76px-69px)]">

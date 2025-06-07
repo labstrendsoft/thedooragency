@@ -13,8 +13,8 @@ export const OlympusView = () => {
     <div className="bg-thedooragency-negro">
       <PortadaOlympus />
       <div className="mx-auto grid w-full max-w-[600px] grid-cols-2 gap-2 px-6 pt-10 xl:px-0">
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
+        <YoutubeLite url="https://www.youtube.com/shorts/v_0qagPtZSI" />
+        <YoutubeLite url="https://www.youtube.com/shorts/bQDhae8tbkI" />
       </div>
 
       <div className="mx-auto max-w-[1200px] px-6 py-10 lg:px-0">
