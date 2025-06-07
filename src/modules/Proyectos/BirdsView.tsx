@@ -19,9 +19,9 @@ export const BirdsView = () => {
         id="video-blue"
         className="mx-auto grid w-full max-w-[1200px] grid-cols-2 gap-2 px-6 py-10 sm:grid-cols-2 lg:grid-cols-3 xl:h-[calc(100dvh-76px)] xl:items-center xl:justify-center xl:px-0"
       >
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
-        <YoutubeLite url="https://www.youtube.com/shorts/yaeNBEAO6Zg" />
+        <YoutubeLite url="https://www.youtube.com/shorts/EK_sSCZnAXY" />
+        <YoutubeLite url="https://www.youtube.com/shorts/II7uHHR3PWk" />
+        <YoutubeLite url="https://www.youtube.com/shorts/lWEqkeKT2s4" />
       </section>
       <div className="grid w-full grid-cols-3 overflow-hidden xl:h-[calc(100dvh-76px)]">
         <Image src={tres} alt="uno" className="aspect-square h-full w-full object-cover" />

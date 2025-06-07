@@ -1,5 +1,5 @@
 import Image1 from '@public/Inicio/trabajos/BIRDS.webp';
-import Image2 from '@public/Inicio/trabajos/GALANA.webp';
+import Image2 from '@public/works/birds/2.webp';
 import Image3 from '@public/Inicio/trabajos/SONQU.webp';
 import Image4 from '@public/Inicio/trabajos/blueDeath.webp';
 import Image5 from '@public/Inicio/trabajos/constructora.webp';
