@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Project } from '../types/project';
-import { Dot, FolderOpen } from 'lucide-react';
+import { FolderOpen } from 'lucide-react';
 import ButtonLinkTheDoorAgency from '@/common/components/customize/ButtonLinkTheDoorAgency';
 
 type ProjectListProps = {
@@ -41,11 +41,14 @@ export const ProjectListAll = ({ projects }: ProjectListProps) => {
             </div>
             <div className="flex flex-col items-center gap-2.5 px-6 lg:items-start lg:px-0">
               <h2 className="font-black text-white md:text-xl">{project.title}</h2>
-              <div className="flex flex-wrap gap-3 md:gap-x-4 md:gap-y-1">
+              <div className="flex flex-wrap items-center justify-center gap-3 md:gap-x-4 md:gap-y-1">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="flex items-center text-xs text-white/80">
-                    <Dot className="w-fit" /> {tag}
-                  </span>
+                  <div key={tag} className="relative flex items-center gap-2 text-xs text-white/80">
+                    <span className="absolute top-[20%] -translate-y-1/2 text-2xl leading-none font-black">
+                      .
+                    </span>
+                    <div className="pl-3">{tag}</div>
+                  </div>
                 ))}
               </div>
               <p className="mb-6 max-w-[500px] text-center text-xs leading-snug text-balance text-white lg:text-start lg:text-sm">

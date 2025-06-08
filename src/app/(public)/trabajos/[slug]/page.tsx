@@ -53,7 +53,7 @@ export default async function Page({ params }: PageProps) {
   const filteredProjects = PROJECTS.filter((project) => project.categories.includes(slug));
 
   return (
-    <div id="nuestros-trabajos">
+    <div id="nuestros-trabajos" className="pb-10">
       <div className="mx-auto max-w-[1000px]">
         <ProjectList projects={filteredProjects} />
       </div>
