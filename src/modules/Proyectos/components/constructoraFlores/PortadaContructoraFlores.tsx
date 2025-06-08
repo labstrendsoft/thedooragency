@@ -1,12 +1,20 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import fondo from '@public/works/constructoraFlores/banner.webp';
 
 export const PortadaConstructoraFlores = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner4, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASogABAAPpE4l0eloyIhMAgAsBIJYgDCgGlfitkzk5Prj29OAAD+/5Mf2ctZd2N+L5Nu+P3fpidoD60/Pj0Myj05QebXlRfMD9Qt0idP4jyw/wHyOlcFtCDIv5ZrDIGyLYs402QIZ4n8STAwF1c3jmV0fZ5FXni1AAA="
+      />
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
           <h2 className="text-center text-3xl font-black text-white">Constructora Flores</h2>

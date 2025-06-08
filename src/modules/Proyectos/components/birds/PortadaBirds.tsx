@@ -1,12 +1,20 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import fondo from '@public/works/birds/banner.webp';
 
 export const PortadaBirds = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner8, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRjYBAABXRUJQVlA4ICoBAAAwBQCdASogABAAPpE4l0eloyIhMAgAsBIJbAC7DiAN4wRoGzZTAFQPla7rQY4dIOTcAAD+/Sn0YhV27dbu3mpV/+TPA9GXMhywC7/sc++psK7N6t/5z8MFJbuOTV7DekrDeuGpffurdzfsJRiuo34Re+/rD5t6oln+cDHY2V81YyDze4xPv2skwCQVDeNUKfnHM6VaJmYuLh2iEb+Ez//DoazTeGfE97NTG/+VLS33+SOcGPkxHvYRNEI753JNrUjHLOHXA5sQ2G3OOUPo6LtZzL5TmoGes+DgdWgdgknKNDrNdc6dN4T3T+/0edK0z/9vlX2Gqc3QfNKTWiFv4SZSj+bte5rlpLbX6L0DRgPnvEicqJccGf37e7WsSiicXdlIhToZA6vzjAAA"
+      />
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
           <h2 className="text-center text-3xl font-black text-white">Birds Luxury Flowers</h2>

@@ -1,12 +1,20 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
-
+import fondo from '@public/works/topCombat/bannerCombat.webp';
 export const PortadaCombat = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner2, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover object-left md:object-center"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRvQAAABXRUJQVlA4IOgAAADwBACdASogABAAPpE4l0eloyIhMAgAsBIJYwC/P2pUEBq8sy/hzC1SOOA6iXzHqiAA/v+dcdmKFc+oH4EbXzXdtUU44NYklXSB7U+62cIM5qP0stP8VIr54mXnScea3KtgActH/uve26hj2GDZzIeXomNuVt63wTxLv8UPyB5uJyIx1QI8Ptf17qrHQZv7pHo9yRq9vPWcI+DVDm0p/vbGYTC1Sya8NCs3vrYZ92wW8zxdVKrNXTOawzKN58WvsOF3uZfYQt2CqWm1YDfGixCpHpX+HnucVfWGwRqDPZkGn8FhQiaL7kAA"
+      />
+
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
           <h2 className="text-center text-3xl font-black text-white">

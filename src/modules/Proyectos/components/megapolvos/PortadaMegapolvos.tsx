@@ -1,12 +1,20 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import fondo from '@public/works/megapolvos/banner.webp';
 
 export const PortadaMegapolvos = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner3, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBACdASogABAAPpE4l0eloyIhMAgAsBIJZwDCgGlgVZQyH9FlqfiQ60AA/v+TKmLAQ5SqhfvR9q459GhT+H/tQPP1SsQiwok8JqEblq/LI9nqoF7bB8WSIxRkvcRUORAI8vph4101Qw7a9xOoHLXoWDWqtt+3+BgsAA=="
+      />
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
           <h2 className="text-center text-3xl font-black text-white">

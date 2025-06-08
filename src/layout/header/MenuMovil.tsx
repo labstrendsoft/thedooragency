@@ -95,16 +95,14 @@ export function MobileMenu() {
                   <span className="text-sm font-medium">Contacto</span>
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://wa.me/51977435348?text=Hola%2C%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20su%20agencia."
-                  className="w-full rounded-full border border-gray-500 bg-transparent px-4 py-2.5 text-sm uppercase"
-                  onClick={() => setOpen(false)}
-                  target="_blank"
-                >
-                  Hablemos por WhatsApp
-                </a>
-              </li>
+              <a
+                href="https://wa.me/51977435348?text=Hola%2C%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20su%20agencia."
+                className="w-full rounded-full border border-gray-500 bg-transparent px-4 py-2.5 text-sm uppercase"
+                onClick={() => setOpen(false)}
+                target="_blank"
+              >
+                Hablemos por WhatsApp
+              </a>
             </ul>
             <div className="flex flex-col items-center justify-center gap-4 border-t border-gray-500 pt-4">
               <h3 className="mx-auto max-w-[150px] text-center text-xs font-light text-gray-200">

@@ -1,12 +1,20 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import fondo from '@public/works/olympus/banner.webp';
 
 export const PortadaOlympus = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner6, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACwBACdASogABAAPpE4l0eloyIhMAgAsBIJZQAFEB7acCr2stB1xyEQPf9UVqjAAP7/gD7HtaR7QIP4GWbcpYumz8WGYBKP9/vSCNpA9MK3yBlGaXKRpKcJT7bOvNoKuIM0kR05ELkXlmPon9gq9YqaeRxdkTGREAkORAAFoY+r8fbJQgyCXcQ3b5f7Lz8GU3zRPB8H2xFRgeGAj+Sfk3qwoUe7z0ynutuJm1e0nV4IOt3w5NGloPaHrijeE0n2biRW3eGXB7P1mJ3wBYGksc+twVAAAA=="
+      />
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
           <h2 className="text-3xl font-black text-white">Olympus Club</h2>

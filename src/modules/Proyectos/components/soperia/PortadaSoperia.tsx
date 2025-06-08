@@ -1,12 +1,20 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import fondo from '@public/works/soperia/banner.webp';
 
 export const PortadaSoperia = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner7, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAACwAwCdASogABAAPpE4l0eloyIhMAgAsBIJZQDE2Glfwf9BrNZwAAD+/4fjbea0tDYx5Kc4KohKNryAfLT3O8kCvCc3EwjPTjBWoJi3HGooAxXejGGtVKGwK2e1JUlxqirYkOAtKAqQlTfyrJLNF/n8XxpmouHiI3f7cIMpQtboAAAA"
+      />
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
           <h2 className="text-center text-3xl font-black text-white">La Sopería</h2>

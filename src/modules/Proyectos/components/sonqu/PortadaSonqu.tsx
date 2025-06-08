@@ -1,13 +1,21 @@
 import React from 'react';
-import ContactStyles from '../../styles/proyectos.module.css';
+// import ContactStyles from '../../styles/proyectos.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import persona from '@public/works/sonqu/sonqu.webp';
+import fondo from '@public/works/sonqu/banner.webp';
 
 export const PortadaSonqu = () => {
   return (
-    <section className={cn(ContactStyles.fondoBanner5, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBACdASogABAAPpE4l0eloyIhMAgAsBIJaADA3GlgEJ0ugg5uzZhLgyoAAP7/J4SjASjJbBsDnO71+s8rMcfORBggzQc9/mwz6z8aEvO7JFAZJMZ7x0h9iKW+X7armwgrOrBH9su8Yc7BVLJxuC5TcA9lCMjioVNFwGWYF310ZMgAAAA="
+      />
       <Image
         src={persona}
         alt="foto del chef sonqu"

@@ -1,12 +1,20 @@
 import React from 'react';
-import AboutStyles from '../styles/about.module.css';
+// import AboutStyles from '../styles/about.module.css';
 import ArrowLeft from '@public/arrow1.webp';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import fondo from '@public/about/banner.webp';
 
 export const Portada = () => {
   return (
-    <section className={cn(AboutStyles.fondoBanner1, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAQBQCdASogABAAPpE6l0eloyIhMAgAsBIJZwC/P2pVWA6xuZh8u7MQyQLMp7nljJgAAP7/iGTfv4s+HNY3hKrP3aaP+G18UNzYvDvd/s707C7NuNJ7ax52bamqI79k9Jj0NoIdlrn/yiqFyUPCqM2VfJJf0QbL/xyrb5kdCSdbuyi5xOqWHYoGRgF/oQ3r7qOWQd8dq8esUuYZaj/g0mo3LSmD9e9IKwLYenXkvILoVJiwDipILuoDM/lKz1FLL3NUhoDc93xfh2f/FHz0MAAA"
+      />
       <div className="fade-in-unique absolute inset-0 flex flex-col items-center justify-center gap-2">
         <h2 className="text-center text-2xl leading-none font-black text-white md:text-[40px]">
           SOBRE NOSOTROS

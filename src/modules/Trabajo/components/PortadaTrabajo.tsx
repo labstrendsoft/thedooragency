@@ -1,12 +1,21 @@
 import React from 'react';
 import ArrowLeft from '@public/arrow1.webp';
-import WorksStyles from '../styles/trabajo.module.css';
-import { cn } from '@/lib/utils';
+// import WorksStyles from '../styles/trabajo.module.css';
+
 import Image from 'next/image';
+import fondo from '@public/works/fondo3.webp';
 
 export const PortadaTrabajo = () => {
   return (
-    <section className={cn(WorksStyles.fondoBanner1, 'relative z-10 h-[calc(100dvh-76px)]')}>
+    <section className="relative z-10 h-[calc(100dvh-76px)] w-full">
+      <Image
+        src={fondo}
+        alt="fondo de combat"
+        className="object-cover"
+        fill
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRpQAAABXRUJQVlA4WAoAAAAQAAAAHwAADwAAQUxQSBIAAAABD9D/iAgIBJL9pQNYIKL/2QpWUDggXAAAADAEAJ0BKiAAEAA+kTiXR6WjIiEwCACwEglpAABb6mdCfS16oNbvn6PS8AD++RMR4KGcGmwE9Czyhv6zuH64b8vbiRJubRmNXenhf9serivJoQfkplOr83sBI4AA"
+      />
       <div className="fade-in-unique absolute inset-0 flex flex-col items-center justify-center gap-2">
         <h1 className="mb-1 text-center text-2xl leading-none font-black text-white md:text-[40px]">
           NUESTROS TRABAJOS
