@@ -5,7 +5,6 @@ import { Header } from '../layout/header/Header';
 import Footer from '../layout/footer/Footer';
 import ScrollToTop from '@/common/components/customize/ScrollToTop';
 import Preloader from '@/common/components/customize/Preloader';
-import TopLoaderControl from '@/common/components/customize/ProgressNextLoader';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -37,7 +36,6 @@ export default function RootLayout({
         className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} font-montserrat min-h-[100vh] antialiased`}
       >
         <Preloader />
-        <TopLoaderControl />
 
         <Header />
         {children}
