@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Home, Briefcase, Users, Phone, FolderKanban } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 import {
   Sheet,
@@ -15,6 +15,7 @@ import {
 import { Button } from '@shadcnui/button';
 import logoTrendBlack from '@public/logoBlack.webp';
 import Image from 'next/image';
+import { socialLinks } from '@/common/data/social';
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -31,9 +32,9 @@ export function MobileMenu() {
           <span className="sr-only">Abrir menú</span>
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-[300px] p-0 sm:w-[350px]">
-        <div className="flex h-full flex-col">
-          <SheetHeader className="border-b p-6 text-left">
+      <SheetContent className="bg-thedooragency-negro w-screen border-none p-0 sm:w-[350px]">
+        <div className="flex h-full flex-col items-center justify-center text-white">
+          <SheetHeader className="hidden border-b p-6 text-left">
             <div className="flex items-center justify-between">
               <SheetTitle className="text-xl font-bold">
                 <Image
@@ -46,15 +47,14 @@ export function MobileMenu() {
             </div>
           </SheetHeader>
 
-          <nav className="flex-1 overflow-auto px-6 py-6">
-            <ul className="space-y-4">
+          <nav className="flex flex-col gap-16">
+            <ul className="flex flex-col items-center justify-center gap-4">
               <li>
                 <Link
                   href="/"
-                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  className="flex items-center gap-3 rounded-lg p-3 uppercase transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  <Home className="h-5 w-5" />
                   <span className="text-sm font-medium">Inicio</span>
                 </Link>
               </li>
@@ -62,51 +62,74 @@ export function MobileMenu() {
               <li>
                 <Link
                   href="/nosotros"
-                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  className="flex items-center gap-3 rounded-lg p-3 uppercase transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  <Users className="h-5 w-5" />
                   <span className="text-sm font-medium">Sobre Nosotros</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/servicios"
-                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  className="flex items-center gap-3 rounded-lg p-3 uppercase transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  <FolderKanban className="h-5 w-5" />
                   <span className="text-sm font-medium">Lo que Hacemos</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/trabajos"
-                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  className="flex items-center gap-3 rounded-lg p-3 uppercase transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  <Briefcase className="h-5 w-5" />
                   <span className="text-sm font-medium">Trabajos</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/contacto"
-                  className="hover:bg-muted flex items-center gap-3 rounded-lg p-3 transition-colors"
+                  className="flex items-center gap-3 rounded-lg p-3 uppercase transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  <Phone className="h-5 w-5" />
                   <span className="text-sm font-medium">Contacto</span>
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://wa.me/51977435348?text=Hola%2C%20estoy%20interesado%20en%20conocer%20más%20sobre%20los%20servicios%20de%20su%20agencia."
+                  className="w-full rounded-full border border-gray-500 bg-transparent px-4 py-2.5 text-sm uppercase"
+                  onClick={() => setOpen(false)}
+                  target="_blank"
+                >
+                  Hablemos por WhatsApp
+                </a>
+              </li>
             </ul>
+            <div className="flex flex-col items-center justify-center gap-4 border-t border-gray-500 pt-4">
+              <h3 className="mx-auto max-w-[150px] text-center text-xs font-light text-gray-200">
+                Síguenos en nuestras Redes Sociales:
+              </h3>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    className="flex items-center"
+                    onClick={() => setOpen(false)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={social.icon}
+                      alt={social.name}
+                      className="h-[20px] w-[20px] object-contain transition-opacity hover:opacity-80"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
           </nav>
-
-          <div className="border-t p-6">
-            <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
-              <span>Hablar por WhatsApp</span>
-            </Button>
-          </div>
         </div>
       </SheetContent>
     </Sheet>

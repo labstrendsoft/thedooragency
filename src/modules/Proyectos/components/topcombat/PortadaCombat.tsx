@@ -9,7 +9,9 @@ export const PortadaCombat = () => {
     <section className={cn(ContactStyles.fondoBanner2, 'relative z-10 h-[calc(100dvh-76px)]')}>
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
-          <h2 className="text-3xl font-black text-white">Top Combat 12 – Angelo Curay</h2>
+          <h2 className="text-center text-3xl font-black text-white">
+            Top Combat 12 – Angelo Curay
+          </h2>
           <div className="mb-2 flex flex-wrap gap-3 md:gap-x-4 md:gap-y-1">
             <div className="relative flex items-center gap-2 text-xs text-white/80 lg:text-sm">
               <span className="absolute top-[20%] -translate-y-1/2 text-2xl leading-none font-black">

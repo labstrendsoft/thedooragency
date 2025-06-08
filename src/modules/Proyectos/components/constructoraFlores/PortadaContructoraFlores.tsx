@@ -9,8 +9,8 @@ export const PortadaConstructoraFlores = () => {
     <section className={cn(ContactStyles.fondoBanner4, 'relative z-10 h-[calc(100dvh-76px)]')}>
       <div className="fade-in-unique mx-auto flex h-full max-w-[1200px] flex-col items-start justify-center gap-2 px-6 xl:px-0">
         <div className="flex flex-col items-center gap-4 px-6 lg:items-start lg:px-0">
-          <h2 className="text-3xl font-black text-white">Mega Polvos – Centro Comercial</h2>
-          <div className="mb-2 flex flex-wrap gap-3 md:gap-x-4 md:gap-y-1">
+          <h2 className="text-center text-3xl font-black text-white">Constructora Flores</h2>
+          <div className="mb-2 flex flex-wrap items-center justify-center gap-3 md:gap-x-4 md:gap-y-1">
             <div className="relative flex items-center gap-2 text-xs text-white/80 lg:text-sm">
               <span className="absolute top-[20%] -translate-y-1/2 text-2xl leading-none font-black">
                 .
@@ -26,19 +26,20 @@ export const PortadaConstructoraFlores = () => {
           </div>
           <div>
             <p className="mb-4 max-w-[500px] text-center text-xs leading-snug text-balance text-white lg:text-start lg:text-sm">
-              Desarrollamos una campaña integral para Mega Polvos, el primer centro comercial de Los
-              Olivos, con el objetivo de atraer inversionistas y compradores interesados en adquirir
-              puestos comerciales dentro del proyecto.
+              El objetivo fue posicionar a Constructora Flores como una empresa sólida y profesional
+              en el sector, destacando sus obras, procesos y valores a través de una estrategia de
+              comunicación integral.
             </p>
             <p className="max-w-[500px] text-center text-xs leading-snug text-balance text-white lg:text-start lg:text-sm">
-              Nos encargamos de la producción de contenido gráfico, videos promocionales y piezas
-              digitales enfocadas en resaltar el potencial comercial, ubicación estratégica y
-              beneficios del centro comercial.
+              Nos encargamos del manejo completo de redes sociales, desarrollando contenido que
+              mostrara el trabajo en obra desde una perspectiva cercana: el día a día de los
+              obreros, los protocolos de seguridad, avances de proyectos y cultura organizacional.
+              También diseñamos su página web, creando un portafolio profesional y funcional.
             </p>
             <p className="max-w-[500px] text-center text-xs leading-snug text-balance text-white lg:text-start lg:text-sm">
-              Gracias a esta estrategia de comunicación, se logró captar la atención de potenciales
-              clientes e impulsar la venta de espacios comerciales, posicionando a Mega Polvos como
-              una nueva y sólida propuesta en la zona norte de Lima.
+              La estrategia permitió humanizar la marca y fortalecer su imagen ante potenciales
+              clientes. Como resultado, la constructora logró obtener nuevos contratos importantes y
+              contar con un portafolio formal para presentar en procesos de licitación.
             </p>
           </div>
           <div className="flex items-center gap-3">
